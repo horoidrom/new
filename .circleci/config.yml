@@ -1,10 +1,9 @@
 version: 2.1
-executors:
-  worker:
-    docker:
-      - image: fr3akyphantom/droid-builder:latest
 jobs:
   build:
+    machine:
+       image: ubuntu-2004:202010-01 # recommended linux image
+    resource_class: large
     executor: worker
     resource_class: large
     steps:
